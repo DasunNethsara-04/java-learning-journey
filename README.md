@@ -69,6 +69,9 @@ My whole journey of learning Java Programming language.
             String name = scanner.nextLine();
 
             Syste.out.println("Welcome back, " + name + "!");
+
+            // close the scanner
+            scanner.close();
         }
     }
     ```
@@ -88,5 +91,6 @@ My whole journey of learning Java Programming language.
 
         System.out.println("You are " + age + " years old!");
         System.out.println("Your GPA is " + gpa + " !");
+        scanner.close();
     }
     ```
