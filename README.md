@@ -167,3 +167,34 @@ My whole journey of learning Java Programming language.
         }
     }
     ```
+
+4. Learnt about the `Random` class to generate random numbers in Java.
+    ```java
+    package com.example;
+
+    import java.util.Random;
+
+    public class Main {
+        public static void main(String[] args) {
+            // create a instance of Random
+            Random random = new Random();
+
+            int number1;    // save random integers
+            double number2; // save random doubles
+            boolean state;  // save random bool value
+
+            // get a random int
+            number1 = random.nextInt(1, 7);
+
+            // get a random double
+            number2 = random.nextDouble(1, 100);
+
+            // get a random boolean
+            state = random.nextBoolean();
+
+            System.out.println(number1);
+            System.out.println(number2);
+            System.out.println(state);
+        }
+    }
+    ```
