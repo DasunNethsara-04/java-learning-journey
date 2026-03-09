@@ -94,3 +94,52 @@ My whole journey of learning Java Programming language.
         scanner.close();
     }
     ```
+
+4. Implemented a simple game called "Mad Libs Game" to practice user inputs and strings well.
+---
+
+### Day 2
+1. Learnt about Arithmetic Operators, Assignment Operators and Increment/ Decrement operators in Java.
+    ```java
+    package com.example;
+
+    public class Main {
+        public static void main(String[] args) {
+            int a = 10;
+            int b = 2;
+
+            a = a + b; // equals to: a += b
+            a = a - b; // equals to: a -= b
+            a = a * b; // equals to: a *= b
+            a = a / b; // equals to: a /= b
+            a = a % b; // equals to: a %= b
+
+            // increment operators
+            int c = 5;
+
+            ++c; // equals to c = c + 1 => c += 1 => Answer: 6
+            c++; // Answer: 7
+            --c; // equals to c = c - 1 => c -= 1 => Answer: 6
+            c--; // Answer: 5
+
+            // System.out.println(c);
+
+            /*
+            * IMPORTANT NOTE
+            * Pre Increment (++var) => increment, then assign
+            * Post Increment (var++) => assign, then increment
+            * Same as Pre/ Post Decrement
+            */
+
+
+            // ORDER OF OPERATIONS
+            double result = 3 + 4 * (7 - 5) / 2.0;
+                        // 3 + 4 * 2 / 2.0
+                        // 3 + 8 / 2.0
+                        // 3 + 4.0
+                        // 7.0
+
+            System.out.println(result);
+        }
+    }
+    ```
