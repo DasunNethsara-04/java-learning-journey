@@ -143,3 +143,5 @@ My whole journey of learning Java Programming language.
         }
     }
     ```
+
+2. Implemented a simple shopping cart program to test my knowledge about I/O, arithmetic operators.
