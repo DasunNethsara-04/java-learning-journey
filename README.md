@@ -303,3 +303,5 @@ My whole journey of learning Java Programming language.
             System.out.println(domain);
     }
     ```
+
+3. Built a simple email slicer and validator program.
