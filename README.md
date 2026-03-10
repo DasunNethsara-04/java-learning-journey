@@ -229,3 +229,7 @@ My whole journey of learning Java Programming language.
         }
     }
     ```
+
+### Day 3
+1. Built a compound interest calculator in Java to test the knowledge about `I/O`, `Math` class and `printf`.
+
