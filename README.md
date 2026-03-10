@@ -306,3 +306,36 @@ My whole journey of learning Java Programming language.
 
 3. Built a simple email slicer and validator program.
 4. Built a simple weight conversion program.
+
+5. Learnt about the Enhanced Switch statement.
+    ```java
+    package com.example;
+
+    public class Main {
+        public static void main(String[] args) {
+            String day = "Monday";
+
+            switch (day) {
+                case "Monday" -> System.out.println("It is a weeday");
+                case "Tuesday" -> System.out.println("It is a weeday");
+                case "Wednesday" -> System.out.println("It is a weeday");
+                case "Thursday" -> System.out.println("It is a weeday");
+                case "Friday" -> System.out.println("It is a weeday");
+                case "Sturday" -> System.out.println("It is the weekend");
+                case "Sunday" -> System.out.println("It is the weekend");
+                default -> System.out.println("Not a day!");
+            }
+
+            // reduced version
+            switch (day) {
+            case "Monday", "Tuesday", "Wednesday", "Thrsday", "Friday" ->
+                System.out.println("It is a Weekday");
+
+            case "Saturday", "Sunday" ->
+                System.out.println("It is the weekend");
+
+            default -> System.out.printf("%s is not a day\n", day);
+        }
+        }
+    }
+    ```
