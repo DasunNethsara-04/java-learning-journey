@@ -466,3 +466,5 @@ My whole journey of learning Java Programming language.
         }
     }
     ```
+
+5. Built a simple banking program to understand methods, enhanced switch statement, loops, if statement
