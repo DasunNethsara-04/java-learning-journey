@@ -641,3 +641,53 @@ My whole journey of learning Java Programming language.
         }
     }
     ```
+
+4. Learnt about the Array of Objects in Java.
+    ```java
+    // Car.java
+    package com.example;
+
+    public class Car {
+        String model;
+        String color;
+
+        Car(String model, String color) {
+            this.model = model;
+            this.color = color;
+        }
+
+        void drive() {
+            System.out.println("You are driving a " + this.color + " " + this.model);
+        }
+    }
+    ```
+    ```java
+    // Main.java
+    package com.example;
+
+    public class Main {
+        public static void main(String[] args) {
+            // array of objects
+            Car[] cars = {
+                    new Car("Mustang", "Red"),
+                    new Car("Corvette", "Blue"),
+                    new Car("Charger", "Yellow")
+            };
+            for (Car car : cars) {
+                car.drive();
+            }
+
+            System.out.println("");
+
+            for (Car car : cars) {
+                car.color = "black";
+            }
+
+            System.out.println("");
+            
+            for (Car car : cars) {
+                car.drive();
+            }
+        }
+    }
+    ```
