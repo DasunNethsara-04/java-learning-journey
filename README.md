@@ -812,3 +812,75 @@ My whole journey of learning Java Programming language.
         }
     }
     ```
+
+7. Learnt about the `super()` in Java.
+    ```java
+    // Person.java
+    package com.example;
+
+    public class Person {
+        String fName;
+        String lName;
+
+        Person(String fName, String lName) {
+            this.fName = fName;
+            this.lName = lName;
+        }
+
+        void showName() {
+            System.out.println(this.fName + " " + this.lName);
+        }
+    }
+    ```
+    ```java
+    // Student.java
+    package com.example;
+
+    public class Student extends Person {
+        double gpa;
+
+        Student(String fName, String lName, double gpa) {
+            super(fName, lName);
+            this.gpa = gpa;
+        }
+
+        void showGpa() {
+            System.out.println(this.fName + "'s GPA is " + this.gpa);
+        }
+    }
+    ```
+    ```java
+    // Employee.java
+    package com.example;
+
+    public class Employee extends Person {
+        String job;
+
+        Employee(String fName, String lName, String job) {
+            super(fName, lName);
+            this.job = job;
+        }
+
+        void showJob() {
+            System.out.println(this.fName + " is a " + this.job);
+        }
+    }
+    ```
+    ```java
+    // Main.java
+    package com.example;
+
+    public class Main {
+        public static void main(String[] args) {
+            // super keyword -> refers to the parent class
+            Person person = new Person("David", "Johns");
+            Student student = new Student("Tony", "Stark", 3.9);
+            Employee employee = new Employee("Stephen", "Strange", "Doctor");
+
+            person.showName();
+            student.showName();
+            student.showGpa();
+            employee.showJob();
+        }
+    }
+    ```
