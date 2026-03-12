@@ -554,3 +554,51 @@ My whole journey of learning Java Programming language.
 
 ### Day 5
 1. Built a Simple Rock, Paper, Scissor Game.
+2. Learnt about the basics of OOP (classes and objects)
+    ```java
+    // Car.java
+    package com.example;
+
+    public class Car {
+        String make = "Ford";
+        String model = "Mustang";
+        int year = 2025;
+        double price = 58000.99;
+        boolean isRunning = false;
+
+        void start() {
+            isRunning = true;
+            System.out.println("Starting the engine!");
+        }
+
+        void stop() {
+            isRunning = false;
+            System.out.println("Stopping the engine!");
+        }
+
+        void drive() {
+            System.out.println("You are driving the " + model);
+        }
+    }
+    ```
+
+    ```java
+    // Main.java
+    package com.example;
+
+    public class Main {
+        public static void main(String[] args) {
+            // lets begin OOP baby.....
+
+            // Object = An entity that holds data (attributes)
+            // and can perform actions (methods)
+            // It is a reference data type
+
+            // let's create a object in Car class
+            Car car1 = new Car();
+            Car car2 = new Car();
+
+            System.out.println(car1.model + " " + car2.model);
+        }
+    }
+    ```
