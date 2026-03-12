@@ -942,3 +942,93 @@ My whole journey of learning Java Programming language.
         }
     }
     ```
+
+9. Learnt about abstraction.
+    ```java
+    // Shape.java
+    package com.example;
+
+    public abstract class Shape {
+        abstract double area(); // ABSTRACT
+
+        // CONCRETE
+        void display() {
+            System.out.println("This is a shape!");
+        }
+    }
+    ```
+    ```java
+    // Circle.java
+    package com.example;
+
+    public class Circle extends Shape {
+        double radius;
+
+        Circle(double radius) {
+            this.radius = radius;
+        }
+
+        @Override
+        double area() {
+            return Math.PI * radius * radius;
+        }
+    }
+    ```
+    ```java
+    // Triangle.java
+    package com.example;
+
+    public class Triangle extends Shape {
+        double base;
+        double height;
+
+        Triangle(double base, double height) {
+            this.base = base;
+            this.height = height;
+        }
+
+        @Override
+        double area() {
+            return 0.5 * base * height;
+        }
+    }
+    ```
+    ```java
+    // Rectangle.java
+    package com.example;
+
+    public class Rectangle extends Shape {
+        double width;
+        double height;
+
+        Rectangle(double width, double height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        @Override
+        double area() {
+            return width * height;
+        }
+    }
+    ```
+    ```java
+    // Main.java
+    package com.example;
+
+    public class Main {
+        public static void main(String[] args) {
+            // abstraction - the process of hiding the implementation details
+
+            // Shape shape = new Shape(); <- not possible
+
+            Circle circle = new Circle(7);
+            Triangle triangle = new Triangle(5, 6);
+            Rectangle rectangle = new Rectangle(6, 7);
+
+            System.out.println(circle.area());
+            System.out.println(triangle.area());
+            System.out.println(rectangle.area());
+        }
+    }
+    ```
