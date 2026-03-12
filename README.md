@@ -727,3 +727,88 @@ My whole journey of learning Java Programming language.
         }
     }
     ```
+
+6. Learnt about inheritance and multi-level inheritance in Java
+    ```java
+    // Organism.java
+    package com.example;
+
+    public class Organism {
+        boolean isAlive;
+
+        Organism() {
+            isAlive = true;
+        }
+    }
+    ```
+    ```java
+    // Animal.java
+    package com.example;
+
+    public class Animal extends Organism {
+        void eat() {
+            System.out.println("Animal is eating!");
+        }
+    }
+    ```
+    ```java
+    // Plant.java
+    package com.example;
+
+    public class Plant extends Organism {
+        void photosynthesize() {
+            System.out.println("Plant absorbs sunlight and CO2");
+        }
+    }
+
+    ```
+    ```java
+    // Dog.java
+    package com.example;
+
+    public class Dog extends Animal {
+
+        int lives = 1;
+
+        void speak() {
+            System.out.println("Woof Woof");
+        }
+    }
+    ```
+    ```java
+    // Cat.java
+    package com.example;
+
+    public class Cat extends Animal {
+        int lives = 9;
+
+        void speak() {
+            System.out.println("Meow...");
+        }
+    }
+    ```
+    ```java
+    // Main.java
+    package com.example;
+
+    public class Main {
+        public static void main(String[] args) {
+            // inheritance
+            Dog dog = new Dog();
+            Cat cat = new Cat();
+
+            dog.eat();
+            cat.eat();
+
+            System.out.println(dog.lives);
+            System.out.println(cat.lives);
+
+            dog.speak();
+            cat.speak();
+
+            Plant plant = new Plant();
+
+            plant.photosynthesize();
+        }
+    }
+    ```
