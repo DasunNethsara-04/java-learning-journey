@@ -691,3 +691,39 @@ My whole journey of learning Java Programming language.
         }
     }
     ```
+
+5. Learnt about `static` keywork in Java
+    ```java
+    // Product.java
+    package com.example;
+
+    public class Product {
+        static int productCount;
+        String productName;
+
+        Product(String name) {
+            this.productName = name;
+            productCount++;
+        }
+
+        static void showProductCount() {
+            System.out.println("Product Count: " + productCount);
+        }
+    }
+    ```
+    ```java
+    package com.example;
+
+    public class Main {
+        public static void main(String[] args) {
+            // static keyword
+
+            Product p1 = new Product("iPhone 11");
+            Product p2 = new Product("MacBook Pro");
+            Product p3 = new Product("iPad");
+
+            System.out.println("Products Count: " + Product.productCount);
+            Product.showProductCount();
+        }
+    }
+    ```
