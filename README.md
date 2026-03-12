@@ -602,3 +602,42 @@ My whole journey of learning Java Programming language.
         }
     }
     ```
+
+3. Learnt about constructors in Java.
+    ```java
+    // Student.java
+    package com.example;
+
+    public class Student {
+        String name;
+        int age;
+        double gpa;
+        boolean isEnrolled;
+
+        Student(String name, int age, double gpa) {
+            this.name = name;
+            this.age = age;
+            this.gpa = gpa;
+        }
+
+        void study() {
+            System.out.println(this.name + " is studying!");
+        }
+    }
+    ```
+    ```java
+    // Main.java
+    package com.example;
+
+    public class Main {
+        public static void main(String[] args) {
+            // constructors
+
+            Student std1 = new Student("David", 20, 3.2);
+            Student std2 = new Student("Sarah", 22, 3.6);
+
+            std1.study();
+            std2.study();
+        }
+    }
+    ```
