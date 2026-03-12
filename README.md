@@ -884,3 +884,61 @@ My whole journey of learning Java Programming language.
         }
     }
     ```
+
+8. Learnt about method overriding.
+    ```java
+    // Animal.java
+    package com.example;
+
+    public class Animal {
+        void move() {
+            System.out.println("Animal is running!");
+        }
+    }
+    ```
+    ```java
+    // Dog.java
+    package com.example;
+
+    public class Dog extends Animal {
+
+    }
+    ```
+    ```java
+    // cat.java
+    package com.example;
+
+    public class Cat extends Animal {
+
+    }
+    ```
+    ```java
+    // Fish.java
+    package com.example;
+
+    public class Fish extends Animal {
+
+        @Override
+        void move() {
+            System.out.println("Animal is swimming!");
+        }
+    }
+    ```
+    ```java
+    // Main.java
+    package com.example;
+
+    public class Main {
+        public static void main(String[] args) {
+            // method overriding
+
+            Dog dog = new Dog();
+            Cat cat = new Cat();
+            Fish fish = new Fish();
+
+            dog.move();
+            cat.move();
+            fish.move();
+        }
+    }
+    ```
