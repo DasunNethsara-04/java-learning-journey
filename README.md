@@ -1032,3 +1032,79 @@ My whole journey of learning Java Programming language.
         }
     }
     ```
+
+### Day 6
+1. Learnt about interfaces in Java.
+    ```java
+    // Prey.java
+    package com.example;
+
+    public interface Prey {
+        void flee();
+    }
+    ```
+    ```java
+    // Predetor.java
+    package com.example;
+
+    public interface Predator {
+        void hunt();
+    }
+    ```
+    ```java
+    // Rabbit.java
+    package com.example;
+
+    public class Rabbit implements Prey {
+        @Override
+        public void flee() {
+            System.out.println("Rabbit is running away.");
+        }
+    }
+    ```
+    ```java
+    // Hawk.java
+    package com.example;
+
+    public class Hawk implements Predator {
+        @Override
+        public void hunt() {
+            System.out.println("Hawk is hunting!");
+        }
+    }
+    ```
+    ```java
+    // Fish.java
+    package com.example;
+
+    public class Fish implements Prey, Predator {
+        @Override
+        public void flee() {
+            System.out.println("Fish is swimming away.");
+        }
+
+        @Override
+        public void hunt() {
+            System.out.println("Fish is hunting.");
+        }
+    }
+    ```
+    ```java
+    // Main.java
+    package com.example;
+
+    public class Main {
+        public static void main(String[] args) {
+            // interfaces
+
+            Rabbit rabbit = new Rabbit();
+            Hawk hawk = new Hawk();
+            Fish fish = new Fish();
+
+            rabbit.flee();
+            hawk.hunt();
+            fish.flee();
+            fish.hunt();
+        }
+    }
+    ```
