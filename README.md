@@ -1411,3 +1411,27 @@ My whole journey of learning Java Programming language.
         }
     }
     ```
+5. Learnt about `ArrayList` in Java.
+    ```java
+    package com.example;
+
+    import java.util.ArrayList;
+
+    public class Main {
+        public static void main(String[] args) {
+            // arraylists
+            ArrayList<String> names = new ArrayList<>();
+
+            names.add("David");
+            names.add("Sarah");
+            names.add("John");
+            names.add("Tony");
+
+            System.out.println(names);
+
+            names.remove(0);
+
+            System.out.println(names);
+        }
+    }
+    ```
