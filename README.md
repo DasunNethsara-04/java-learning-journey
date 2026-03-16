@@ -1108,3 +1108,65 @@ My whole journey of learning Java Programming language.
         }
     }
     ```
+
+2. Learnt about polymophism.
+    ```java
+    // Vehicle.java
+    package com.example;
+
+    public abstract class Vehicle {
+        abstract void go();
+    }
+    ```
+    ```java
+    // Bick.java
+    package com.example;
+
+    public class Bick extends Vehicle {
+        @Override
+        void go() {
+            System.out.println("You riding the bick");
+        }
+    }
+    ```
+    ```java
+    // Boat.java
+    package com.example;
+
+    public class Boat extends Vehicle {
+        @Override
+        void go() {
+            System.out.println("You sailing the");
+        }
+    }
+    ```
+    ```java
+    // Car.java
+    package com.example;
+
+    public class Car extends Vehicle {
+        @Override
+        void go() {
+            System.out.println("You drive the car");
+        }
+    }
+    ```
+    ```java
+    // Main.java
+    package com.example;
+
+    public class Main {
+        public static void main(String[] args) {
+            // polymophism
+            Boat boat = new Boat();
+            Car car = new Car();
+            Bick bick = new Bick();
+
+            Vehicle[] vehicles = { boat, car, bick };
+
+            for (Vehicle vehicle : vehicles) {
+                vehicle.go();
+            }
+        }
+    }
+    ```
