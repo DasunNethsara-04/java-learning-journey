@@ -1170,3 +1170,60 @@ My whole journey of learning Java Programming language.
         }
     }
     ```
+
+### Day 7
+1. Learnt about runtime polymorphism.
+    ```java
+    // Animal
+    package com.example;
+
+    public abstract class Animal {
+        abstract void speak();
+    }
+    ```
+    ```java
+    // Dog.java
+    package com.example;
+
+    public class Dog extends Animal {
+        @Override
+        void speak() {
+            System.out.println("The cat goes *woof*");
+        }
+    }
+    ```
+    ```java
+    package com.example;
+
+    public class Cat extends Animal {
+        @Override
+        void speak() {
+            System.out.println("The cat goes *mewo*");
+        }
+    }
+    ```
+    ```java
+    package com.example;
+
+    import java.util.Scanner;
+    public class Main {
+        public static void main(String[] args) {
+            Animal animal;
+
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Wich animal do you like most? (1 - Dog, 2 - Cat): ");
+            int choice = scanner.nextInt();
+
+            if(choice == 1) {
+                animal = new Dog();
+                animal.speak();
+            } else if(choice == 2) {
+                animal = new Cat();
+                animal.speak();
+            }
+
+            scanner.close();
+        }
+    }
+    ```
