@@ -1228,7 +1228,7 @@ My whole journey of learning Java Programming language.
     }
     ```
 
-1. Learnt about Getters and Setters.
+2. Learnt about Getters and Setters.
     ```java
     // Car.java
     package com.example;
@@ -1285,6 +1285,73 @@ My whole journey of learning Java Programming language.
             car.setColor("green");
 
             System.out.println(car.getModel() + " " + car.getColor() + " " + car.getPrice());
+        }
+    }
+    ```
+
+3. Learnt about Aggregation in Java.<br>
+    - *Represent a 'has a' relationship between objects. One object contains another object as part of its structure.*
+    ```java
+    // Book.java
+    package com.example;
+
+    public class Book {
+        private final String name;
+        private final int pages;
+
+        public Book(final String name, final int pages) {
+            this.name = name;
+            this.pages = pages;
+        }
+
+        public void getInfo() {
+            System.out.println(this.name + " (" + this.pages + ")");
+        }
+    }
+    ```
+    ```java
+    // Library.java
+    package com.example;
+
+    public class Library {
+        private final String name;
+        private final int year;
+        private Book[] books;
+
+        public Library(String name, int year, Book[] books) {
+            this.name = name;
+            this.year = year;
+            this.books = books;
+        }
+
+        public void getInfo() {
+            System.out.println("The " + this.year + " " + this.name);
+            System.out.println("Available Books: ");
+            for (Book book : books) {
+                book.getInfo();
+            }
+        }
+
+    }
+    ```
+    ```java
+    // Main.java
+    package com.example;
+
+    public class Main {
+        public static void main(String[] args) {
+            // aggregation
+
+            Book book1 = new Book("Test Book 1", 576);
+            Book book2 = new Book("Test Book 2", 890);
+            Book book3 = new Book("Test Book 3", 273);
+
+            Book[] books = { book1, book2, book3 };
+
+            Library library = new Library("NYC Library", 1972, books);
+
+            library.getInfo();
+
         }
     }
     ```
