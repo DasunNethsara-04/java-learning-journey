@@ -1355,3 +1355,59 @@ My whole journey of learning Java Programming language.
         }
     }
     ```
+4. Learnt about composition in Java <br>
+    - *Represent a 'part of' relationship between objects. For an example, Engine is a part of Car.*
+
+    ```java
+    // Engine.java
+    package com.example;
+
+    public class Engine {
+        private final String type;
+
+        public Engine(String type) {
+            this.type = type;
+        }
+
+        public void start() {
+            System.out.println(this.type + " engine is starting!");
+        }
+    }
+    ```
+
+    ```java
+    // Car.java
+    package com.example;
+
+    public class Car {
+        private final String model;
+        private final int year;
+        private final Engine engine;
+
+        public Car(String model, int year, String engineType) {
+            this.model = model;
+            this.year = year;
+            this.engine = new Engine(engineType);
+        }
+
+        public void start() {
+            this.engine.start();
+            System.out.println(this.model + " is staring!");
+        }
+    }
+    ```
+
+    ```java
+    // Main.java
+    package com.example;
+
+    public class Main {
+        public static void main(String[] args) {
+            // composition
+
+            Car car = new Car("Corvette", 2025, "V8");
+
+            car.start();
+        }
+    }
+    ```
