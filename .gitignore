@@ -24,3 +24,4 @@ hs_err_pid*
 replay_pid*
 /GUI/app1/target/
 /GUI/app2/target/
+/GUI/app3/target/
